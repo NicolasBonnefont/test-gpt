@@ -14,6 +14,7 @@ async function geraGPT() {
   try {
 
     const prompt = fs.readFileSync('./prompt.txt', 'utf8')
+
     const openai = new OpenAIApi(config)
 
     const img = String(prompt).toLocaleLowerCase().includes('gerar imagem')
@@ -27,6 +28,7 @@ async function geraGPT() {
         n: 1,
         size: "512x512",
       });
+
       const fileName = './exemplo.jpg'
 
       axios({
@@ -46,9 +48,10 @@ async function geraGPT() {
           console.error(`Erro ao fazer requisição HTTP: ${err}`);
         });
 
-
     } else {
+
       console.log('Gerando texto...')
+
       const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: `${prompt}`,
@@ -62,6 +65,5 @@ async function geraGPT() {
     console.log(error?.response.data)
   }
 }
-
 
 export default geraGPT

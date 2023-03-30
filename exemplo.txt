@@ -1,0 +1,3 @@
+
+
+O ICMS é determinado com base na relação do Código Fiscal de Operações e Prestações. Para calcular o ICMS entre São Paulo e o Acre, primeiro é necessário verificar qual é a alíquota aplicável para o produto ou serviço específico que está sendo comercializado entre os dois estados. Em seguida, para o cálculo do ICMS, é preciso multiplicar o valor do preço do produto ou serviço pela alíquota aplicável. Por exemplo, se o preço do produto ou serviço é de R$ 100 e a alíquota aplicável é de 12%, então o valor do ICMS é de R$ 12.

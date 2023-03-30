@@ -1,10 +1,22 @@
 {
-  "name": "teste-gpt",
+  "name": "GPT-MOR",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch app/gpt.ts "
+    "dev": "tsx app/server.ts ",
+    "build": "tsc --build",
+    "exe": "yarn build && pkg ."
+  },
+  "pkg": {
+    "scripts": "build/**/*.js",
+    "targets": [
+      "node18"
+    ],
+    "outputPath": "dist"
+  },
+  "bin": {
+    "GPT-MOR": "build/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +26,11 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "axios": "0.27.2",
+    "dotenv": "^16.0.3",
     "fastify": "^4.15.0",
-    "openai": "^3.2.1"
+    "openai": "^3.2.1",
+    "pkg": "^5.8.1",
+    "tsx": "^3.12.6"
   }
 }
